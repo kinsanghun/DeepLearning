@@ -36,14 +36,13 @@ def XOR(x1, x2):
   return AND(w1, w2)
 
 def main():
-  print(AND(0, 1))
-  print(NAND(0, 1))
-  print(OR(0, 1))
-  print("XOR :")
-  print(XOR(0, 0))
-  print(XOR(1, 0))
-  print(XOR(0, 1))
-  print(XOR(1, 1))
+  x1 = int(input("input x1:"))
+  x2 = int(input("input x2:"))
+  print()
+  print(AND(x1,x2))
+  print(NAND(x1,x2))
+  print(OR(x1,x2))
+  print(XOR(x1,x2))
   
 if __name__ == '__main__':
     main()
