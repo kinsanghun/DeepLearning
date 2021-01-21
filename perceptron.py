@@ -29,11 +29,21 @@ def OR(x1, x2):
     return 0
   else:
     return 1
+def XOR(x1, x2):
+  w1 = NAND(x1, x2)
+  w2 = OR(x1, x2)
   
+  return AND(w1, w2)
+
 def main():
   print(AND(0, 1))
   print(NAND(0, 1))
   print(OR(0, 1))
+  print("XOR :")
+  print(XOR(0, 0))
+  print(XOR(1, 0))
+  print(XOR(0, 1))
+  print(XOR(1, 1))
   
 if __name__ == '__main__':
     main()
