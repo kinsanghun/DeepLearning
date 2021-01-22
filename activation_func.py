@@ -12,6 +12,15 @@ def sigmoid(x):
 def relu(x):
   return np.maximum(0, x)
 
+def softmax(x):
+  c = np.max(x) # 가장 큰 값 찾기
+  exp_x = np.exp(x - c)
+  sum_exp_x = np.sum(exp_x)
+  y = exp_x / sum_exp_x
+  
+  return y
+
+
 x = np.arange(-5.0, 5.0, 0.1)
 
 # step_function
